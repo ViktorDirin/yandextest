@@ -4,6 +4,196 @@
 @import "libs.scss";
 @import "global";
 
+// ----------------------------------- WELCOME -------------------------
+.welcome {
+  background-image: url(../images/welcome-gb.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner {
+    padding-top: 28px;
+    height: 782px;
+  }
+  &__top {
+    display: flex;
+    &-text {
+      margin-left: 8px;
+      @extend %golos-700;
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  }
+  &__main {
+    width: 542px;
+    margin-top: 62px;
+    &-title {
+      @extend %merri-400;
+      font-size: 60px;
+      line-height: 66px;
+      text-transform: uppercase;
+      &:nth-child(2) {
+        text-align: center;
+      }
+      &:nth-child(3) {
+        text-align: right;
+      }
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+      margin: 24px 0 40px;
+    }
+    &-wraper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+// ----------------------------------- WELCOME END -------------------------
+
+// ----------------------------------- TEXTLINE -------------------------
+.textline {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  padding: 18px 0;
+  background-color: $accent;
+  &-box {
+    white-space: nowrap;
+    display: flex;
+    animation: marquee 12s linear infinite;
+  }
+  &-text {
+    position: relative;
+    display: inline-block;
+    width: max-content;
+    @extend %merri-400;
+    color: #ffffff;
+    text-wrap: nowrap;
+    font-size: 22px;
+    line-height: 24px;
+    padding-left: 30px;
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 6px;
+      height: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12px;
+      border-radius: 3px;
+      background-color: #ffffff;
+    }
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+// ----------------------------------- TEXTLINE END -------------------------
+
+// ----------------------------------- DONATE -------------------------
+.donate {
+  &__inner {
+    padding: 80px 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-text {
+      width: 764px;
+      @extend %merri-400;
+      font-size: 36px;
+      line-height: 46px;
+      text-transform: uppercase;
+    }
+    &-link {
+      color: $accent;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+// ----------------------------------- DONATE END -------------------------
+// ----------------------------------- SEANSE -------------------------
+.seans {
+  &__inner {
+    padding: 32px 0 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__image {
+    position: relative;
+    width: 474px;
+    height: 527px;
+    margin-right: 27px;
+    &-img {
+      position: absolute;
+      min-width: 532px;
+      height: auto;
+      right: -32px;
+      top: -28px;
+    }
+  }
+  &__info {
+    width: 704px;
+    margin-left: 17px;
+    &-title {
+      @extend %merri-400;
+      font-size: 36px;
+      line-height: 46px;
+      text-transform: uppercase;
+      & span {
+        color: $accent;
+      }
+      margin-bottom: 60px;
+    }
+    &-table {
+      margin-bottom: 48px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    &-row {
+      &:not(:last-child) {
+        border-bottom: 1px solid #d0d0d0;
+      }
+    }
+    &-cell {
+      padding: 16px;
+      &:nth-child(1) {
+        padding-left: 0;
+      }
+      &:nth-child(2) {
+        @extend %golos-600;
+        border-left: 1px solid #d0d0d0;
+      }
+      &--line {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 1px;
+          top: 50%;
+          left: 0;
+          background-color: $accent;
+        }
+      }
+    }
+    &-text {
+      color: $blue;
+    }
+  }
+}
+// ----------------------------------- SEANSE END -------------------------
 // ----------------------------------- FOOTER -------------------------
 
 .footer {

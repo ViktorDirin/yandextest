@@ -12,7 +12,7 @@ $blue: #3057a2;
 }
 %golos-600 {
   font-family: "GolosText-SemiBold";
-  font-weight: 500;
+  font-weight: 600;
 }
 %golos-700 {
   font-family: "GolosText-Bold";
@@ -30,22 +30,6 @@ $blue: #3057a2;
   font-family: "Merriweather-Light";
   font-weight: 300;
 }
-
-// %btn{
-//     cursor: pointer;
-//     padding: 12px 36px;
-//     width: fit-content;
-//     text-transform: uppercase;
-//     color: #ffffff;
-//     @extend %roboto-400;
-//     background-color: $accent;
-//     border: 1px solid transparent;
-//     box-shadow: 7px 7px 20px #fe3e575e;
-//     &:hover {
-//             background-color: #ff0021;
-//             border: 1px solid #ffffff;
-//         }
-// }
 
 // @function max($numbers...) {
 //     @return m#{a}x(#{$numbers});
