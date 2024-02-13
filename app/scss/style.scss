@@ -194,9 +194,172 @@
   }
 }
 // ----------------------------------- SEANSE END -------------------------
+
+// ----------------------------------- STAGES -------------------------
+.stages {
+  &__inner {
+    padding: 100px 0;
+  }
+  &__title {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 54px;
+    &-text {
+      @extend %merri-400;
+      font-size: 54px;
+      line-height: 60px;
+      text-transform: uppercase;
+    }
+    &-discr {
+      position: absolute;
+      bottom: 8px;
+      left: 43%;
+      color: $blue;
+    }
+  }
+  &__steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 112px 112px 136px;
+    grid-gap: 20px;
+    &-item {
+      display: flex;
+      padding: 20px;
+      background-image: url(../images/bg-img.jpg);
+      &:nth-child(3) {
+        grid-row: span 2;
+      }
+      &:nth-child(7) {
+        grid-column: span 2;
+        & > .stages__steps-item-text {
+          width: 412px;
+        }
+      }
+      &-num {
+        min-width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 36px;
+        margin-right: 16px;
+      }
+    }
+    &-img {
+      position: absolute;
+      bottom: 28px;
+      right: -40px;
+    }
+  }
+}
+// ----------------------------------- STAGES END -------------------------
+
+// ----------------------------------- USERS -------------------------
+.users {
+  &__inner {
+    padding: 100px 0;
+  }
+  &__title {
+    @extend %merri-400;
+    font-size: 54px;
+    line-height: 62px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  &__slider {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &::after {
+      position: absolute;
+      content: "6";
+      right: 72px;
+      top: -104px;
+    }
+    &::before {
+      position: absolute;
+      content: "3/";
+      right: 84px;
+      top: -104px;
+    }
+    &-item {
+      width: 320px;
+      &-wraper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-img {
+      max-width: 320px;
+      height: auto;
+      margin-bottom: 28px;
+    }
+    &-name {
+      @extend %golos-600;
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 6px;
+    }
+    &-status {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    &-btn {
+      padding: 12px;
+      border: 1px solid $blue;
+      border-radius: 20px;
+      @extend %golos-500;
+      font-size: 16px;
+      line-height: 16px;
+      color: $blue;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 6px $blue;
+        transition: all 0.2s;
+      }
+    }
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  font-size: 0;
+  width: 44px;
+  height: 44px;
+  top: -112px;
+  border-radius: 50%;
+  background-color: $defoult;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:hover {
+    background-color: #fbce51;
+  }
+  &.slick-disabled {
+    background-color: #d6d6d6;
+  }
+}
+.slick-prev {
+  right: 115px;
+  background-image: url(../images/arrow-left.svg);
+}
+.slick-next {
+  right: 15px;
+  background-image: url(../images/arrow-right.svg);
+}
+// ----------------------------------- USERS END -------------------------
+
 // ----------------------------------- FOOTER -------------------------
 
 .footer {
+  background-color: #e9ded4;
+  &-text {
+    margin: 40px 0 72px;
+    font-size: 16px;
+  }
 }
 
 // ----------------------------------- FOOTER END ---------------------
