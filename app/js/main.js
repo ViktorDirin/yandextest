@@ -9,14 +9,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 $(document).ready(function () {
+
+    $(".stages__steps").slick({
+        dots: true,
+        arrows: true,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: "unslick"
+            }
+        ]
+    });
     $(".users__slider").slick({
-        // dots: true,
         arrows: true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-        // autoplay: true,
-        // autoplaySpeed: 4000,
+        autoplay: true,
+        autoplaySpeed: 4000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -30,27 +45,10 @@ $(document).ready(function () {
                     slidesToShow: 1,
                 },
             },
-        ],
-    });
-    $(".stages__steps").slick({
-        dots: true,
-        arrows: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-
-        mobileFirst: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: "unslick"
-            }
         ]
-
     });
 
     $('.btn-modal').on('click', function () {
-        console.log('click');
         $('.modal').css("display", "block");
     });
     $('.closeModal, .modal').on('click', function () {
