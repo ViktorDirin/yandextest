@@ -23,6 +23,7 @@ main {
     cursor: pointer;
     width: 262px;
     height: 74px;
+    padding: 0 44px;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
@@ -44,6 +45,30 @@ main {
       background-color: $defoult;
       color: #ffffff;
       transition: all 0.2s;
+    }
+  }
+}
+
+.mobile--show {
+  display: none;
+}
+.mobile--hide {
+  display: flex;
+}
+
+.test__table {
+  width: 704px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &-item {
+    padding: 16px;
+    border-bottom: 1px solid #d1d1d1;
+    &:nth-child(even) {
+      font-weight: 600;
+      border-left: 1px solid #d1d1d1;
+    }
+    &:nth-last-child(-n + 2) {
+      border-bottom: none;
     }
   }
 }
